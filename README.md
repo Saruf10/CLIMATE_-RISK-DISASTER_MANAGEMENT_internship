@@ -1,21 +1,34 @@
 🌲 Forest Fire Risk Mapping
-Overview
 This project analyzes historical forest fire data to predict fire risk based on weather conditions. Early prediction can help prevent wildfires and protect lives and resources.
 
-Dataset
-Source: Forest Fire Dataset - Kaggle
+📂 Dataset Source
 
-Key Features:
+Forest Fire Dataset – Kaggle
 
-X, Y → Coordinates
+🔑 Key Features
+X, Y → Spatial coordinates
 month, day → Time of observation
 FFMC, DMC, DC, ISI → Fire weather indices
 temp, RH, wind, rain → Weather conditions
 area → Burned area (ha)
+fire → Binary target (fire occurred or not)
 
-Work Done
-Loaded and explored the dataset.
-Checked data types and summary statistics.
-Verified there are no missing values.
+✅ Work Completed
 
-Identified categorical (month, day) and continuous variables (temp, RH, wind, rain, fire indices, area).
+Data Loading & Exploration:
+Loaded dataset using Pandas.
+Displayed head, info, and descriptive statistics.
+Verified no missing values.
+
+Exploratory Data Analysis (EDA):
+Univariate analysis: Histograms, count plots, and boxplots for continuous and categorical features.
+Bivariate analysis: Scatterplots & boxplots to check relationships between variables and fire occurrence.
+Correlation matrix: Visualized correlations among numerical features.
+Pairplot: Plotted relationships between numerical variables, colored by fire occurrence.
+
+Data Preprocessing:
+Encoded categorical variables (month, day) using one-hot encoding.
+Split data into training and testing sets (80/20).
+Applied feature scaling with StandardScaler:
+fit_transform() on training data
+transform() on test data
